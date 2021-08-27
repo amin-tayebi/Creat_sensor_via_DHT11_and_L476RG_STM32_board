@@ -1,5 +1,5 @@
 # DHT11_sensor_data_to_L476RG_STM32_board
-<b>🔥🔥🔥 GOAL of the project:</b>
+<b>🔥 GOAL of the project:</b>
 
 Transmitting Temperature and Humidity of DHT11_sensor via L476RG_STM32 board to output (In a Terminal application)
 
