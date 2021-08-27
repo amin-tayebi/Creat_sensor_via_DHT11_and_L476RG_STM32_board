@@ -3,21 +3,22 @@
 
 Transmitting Temperature and Humidity of DHT11_sensor via L476RG_STM32 board to output (In a Terminal application)
 
+
 <b>Hardware equipment:</b>
 
-DHT11_sensor
+- DHT11_sensor
 
-L476RG_STM32 board
+- L476RG_STM32 board
 
-Related USB cable (connect board to the PC)
+- Related USB cable (connect board to the PC)
 
-3*Jumper wires
+- 3*Jumper wires
 
 <b>Software equipment:</b>
 
-Cube-IDE software
+- Cube-IDE software
 
-Cutecome terminal application (or any terminal application)
+- Cutecome terminal application (or any terminal application)
 
 <b>Related video:</b>
 
@@ -32,7 +33,9 @@ https://drive.google.com/drive/folders/193a0y-XQt243AbnOHGVEFdcdlx3MfqSE?usp=sha
 - Its possible to use this code  in other STM32 boards. just you need to enable the TIM (timer) in the scheme of the board and then modify it corresponding to TIMER number (TIMx) every where in the code it has been used (e.g. if you enabeled TIM2 or TIM3).
 
 The TIMER TIM2 with following parameters enabled:
+
 Trigger source = ITR0
+
 prescaler =80-1"
 
 In the Board scheme for the signal transmission of DHT11:
@@ -42,13 +45,17 @@ PIN PA10 set to "GPIOoutput" (PIN name = A PIN number = 10)
 <b>👋 Additional resources</b>
 
 Links for downloading STM-cube-IDE:
+
 https://www.st.com/en/development-tools/stm32cubeide.html
 
 L476RG_STM32_BOARD documentation and user manual:
+
 https://www.st.com/resource/en/user_manual/um1724-stm32-nucleo64-boards-mb1136-stmicroelectronics.pdf
 
 L476RG_STM32_BOARD pins out:
+
 https://os.mbed.com/platforms/ST-Nucleo-L476RG/
 
 DHT11 usermanual:
+
 https://www.mouser.com/datasheet/2/758/DHT11-Technical-Data-Sheet-Translated-Version-1143054.pdf
