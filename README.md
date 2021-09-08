@@ -3,23 +3,6 @@
 
 Transmitting Temperature and Humidity of DHT11_sensor via L476RG_STM32 board to output (In a Terminal application)
 
-
-<b>👉 Hardware equipment</b>
-
-- DHT11_sensor
-
-- L476RG_STM32 board
-
-- Related USB cable (connect board to the PC)
-
-- 3*Jumper wires
-
-<b>👉 Software equipment</b>
-
-- Cube-IDE software
-
-- Cutecome terminal application (or any terminal application)
-
 <b>📚 Description</b>
 
 - I wrote the codes in main.c of the project while its also possible to create a header libarary (DHT11.h) and a C library (DHT11.c) and write the fuctions on them. Then call it in the main.c.
@@ -41,6 +24,21 @@ PIN PA10 set to "GPIOoutput" (PIN name = A PIN number = 10)
 
 https://drive.google.com/drive/folders/193a0y-XQt243AbnOHGVEFdcdlx3MfqSE?usp=sharing
 
+<b>👉 Hardware equipment</b>
+
+- DHT11_sensor
+
+- L476RG_STM32 board
+
+- Related USB cable (connect board to the PC)
+
+- 3*Jumper wires
+
+<b>👉 Software equipment</b>
+
+- Cube-IDE software
+
+- Cutecome terminal application (or any terminal application)
 
 <b>👋 Additional resources</b>
 
