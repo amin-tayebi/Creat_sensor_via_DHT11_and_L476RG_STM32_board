@@ -37,7 +37,7 @@ prescaler =80-1"
 In the Board scheme for the signal transmission of DHT11:
 PIN PA10 set to "GPIOoutput" (PIN name = A PIN number = 10)
 
-<b>Related video</b>
+<b>Video of deploying scenario</b>
 
 https://drive.google.com/drive/folders/193a0y-XQt243AbnOHGVEFdcdlx3MfqSE?usp=sharing
 
