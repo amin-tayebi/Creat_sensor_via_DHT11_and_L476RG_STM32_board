@@ -15,6 +15,8 @@ https://drive.google.com/drive/folders/193a0y-XQt243AbnOHGVEFdcdlx3MfqSE?usp=sha
 
 - Its possible to use this code  in other STM32 boards. Just you need to enable the TIM (timer) in the scheme of the board, then modify and correspond it to the TIMER number (TIMx) every where in the code it has been used (e.g. if you enabeled TIM2 or TIM3).
 
+- I didn't put other codes (main.h or stm32l4xx_hal.h) as they are remain unchange after opening L476RG board exapmle.
+
 Here the TIMER TIM2 with following parameters enabled:
 
 Trigger source = ITR0
