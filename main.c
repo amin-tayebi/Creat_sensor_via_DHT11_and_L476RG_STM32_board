@@ -6,9 +6,9 @@
   ******************************************************************************
   * @attention
   *
-  *Copyright (c) 2021 Amin TAYEBI 
+  *1-Copyright (c) 2021 Amin TAYEBI under BSD 3-Clause license.
   *   
-  * This code is licensed also by ST under BSD 3-Clause license,
+  *2-A part of this code is licensed also by ST under BSD 3-Clause license,
   * the "License"; You may not use this file except in compliance with the
   * License. You may obtain a copy of the License at:
   *                        opensource.org/licenses/BSD-3-Clause
@@ -394,4 +394,4 @@ void assert_failed(uint8_t *file, uint32_t line)
 }
 #endif /* USE_FULL_ASSERT */
 
-/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+/************************ (C) COPYRIGHT 1-Amin TAYEBI 2-STMicroelectronics *****END OF FILE****/
