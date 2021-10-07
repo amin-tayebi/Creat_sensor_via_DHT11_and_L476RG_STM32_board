@@ -47,9 +47,9 @@ UART_HandleTypeDef huart2;
 /* USER CODE BEGIN PV */
 uint8_t Rh_byte1, Rh_byte2, Temp_byte1, Temp_byte2;
 uint16_t SUM, RH, TEMP;
-float Temperature = 0;
-float Humidity = 0;
-uint8_t Presence = 0;
+//float Temperature = 0;
+//float Humidity = 0;
+//uint8_t Presence = 0;
 
 char buffer[50];
 /* USER CODE END PV */
