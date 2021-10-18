@@ -9,7 +9,11 @@ https://drive.google.com/drive/folders/193a0y-XQt243AbnOHGVEFdcdlx3MfqSE?usp=sha
 
 <b>📚 Description</b>
 
-- Based on the usermanual of DHT11 we implement the steps necessaary to interact with DHT11 to read it's data. 
+- Based on the usermanual of DHT11 a library wrote to implement 4 steps mentioned in the usermanual to be able to read DHT11 sensor data (Temperature and Humidity) and interact with DHT11 to read it's data. 
+
+- Pull-up and pull-down procedures for the MCU pin(MCU I/O or GPIO in/out) implemented and set them to high or low based on the DHT11 usermanual
+
+- We Studied how define timer and related interrupt parameters. Then a timer defined to generate interrupt and delay in the board to be able to interact with DHT11 sensor and read its data 
 
 - We wrote the codes in main.c of the project while its also possible to create a header libarary (DHT11.h) and a C library (DHT11.c) and write the fuctions on them and locate these files on the Src Folder (where other header libraries exist). Then call x.h file in the main.c (e.g. Include DHT11.h).
 
@@ -25,7 +29,7 @@ Here the TIMER TIM2 with following parameters enabled:
 
 Trigger source = ITR0
 
-prescaler =80-1"
+prescaler = 80-1
 
 In the Board scheme for the signal transmission of DHT11:
 PIN PA10 set to "GPIOoutput" (PIN name = A PIN number = 10)
