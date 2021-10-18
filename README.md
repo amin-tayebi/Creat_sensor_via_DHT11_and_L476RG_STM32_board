@@ -9,7 +9,7 @@ https://drive.google.com/drive/folders/193a0y-XQt243AbnOHGVEFdcdlx3MfqSE?usp=sha
 
 <b>📚 Description</b>
 
-- Based on the usermanual of DHT11 a library wrote to implement 4 steps mentioned in the usermanual to be able to read DHT11 sensor data (Temperature and Humidity) and interact with DHT11 to read it's data. Main functions defined are (DHT11_start, Check_response, DHT11_read) but besides there would be needed other functions (Delay, Pin_input, Pin_output)
+- Based on the usermanual of DHT11 a library wrote to implement 4 steps mentioned in the usermanual to be able to read DHT11 sensor data (Temperature and Humidity) and interact with DHT11 to read it's data. Main functions defined are (DHT11_start, Check_response, DHT11_read) but besides there would be needed other functions (Delay, Set_Pin_input, Set_Pin_output)
 
 - Pull-up and pull-down procedures for the MCU pin(MCU I/O or GPIO in/out) implemented and set them to high or low based on the DHT11 usermanual
 
