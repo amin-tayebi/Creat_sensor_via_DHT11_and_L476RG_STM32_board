@@ -67,7 +67,7 @@ static void MX_TIM2_Init(void);
 /* USER CODE BEGIN 0 */
 void delay (uint16_t time)
 {
-	/* change your code here for the delay in microseconds */
+	/* change your code here for the delay in microseconds(us) */
 
 	__HAL_TIM_SET_COUNTER(&htim2, 0);
 	while ((__HAL_TIM_GET_COUNTER(&htim2))<time);
@@ -91,23 +91,23 @@ void Set_Pin_Input (GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin)
 }
 void DHT11_Start (void)
 {
-	Set_Pin_Output(GPIOA , GPIO_PIN_10);  // set the pin as output
-	HAL_GPIO_WritePin (GPIOA , GPIO_PIN_10, 0);   // pull the pin low
-	delay (18000);   // wait for 18us
+	Set_Pin_Output(GPIOA , GPIO_PIN_10);           // set the pin as output
+	HAL_GPIO_WritePin (GPIOA , GPIO_PIN_10, 0);    // pull the pin low
+	delay (18000);   // wait for 18000us
 	HAL_GPIO_WritePin (GPIOA , GPIO_PIN_10, 1);   // pull the pin high
 	delay (20);   // wait for 20us
-	Set_Pin_Input(GPIOA , GPIO_PIN_10);    // set as input
+	Set_Pin_Input(GPIOA , GPIO_PIN_10);            // set as input
 }
-//-------------------------------------------------------------------we did'nt use it but it could be used to check if the sensor is present or not
+//-------------------------------------------------------------------we did'nt use "DHT11_Check_Response" function, but it could be used to check if the sensor is present or not
 uint8_t DHT11_Check_Response (void)
 {
-	uint8_t Response = 0;
-	delay (40);
+	uint8_t Response = 0;         
+	delay (40);                                          // wait for 40us
 	if (!(HAL_GPIO_ReadPin (GPIOA , GPIO_PIN_10)))
 	{
-		delay (80);
+		delay (80);                                 // wait for 80us
 		if ((HAL_GPIO_ReadPin (GPIOA , GPIO_PIN_10))) Response = 1;
-		else Response = -1; // 255
+		else Response = -1;                         // 255
 	}
 	while ((HAL_GPIO_ReadPin (GPIOA , GPIO_PIN_10)));   // wait for the pin to go low
 
@@ -119,13 +119,13 @@ uint8_t DHT11_Read (void)
 	for (j=0;j<8;j++)
 	{
 		while (!(HAL_GPIO_ReadPin (GPIOA , GPIO_PIN_10)));   // wait for the pin to go high
-		delay (40);   // wait for 40 us
-		if (!(HAL_GPIO_ReadPin (GPIOA , GPIO_PIN_10)))   // if the pin is low
+		delay (40);                                          // wait for 40 us
+		if (!(HAL_GPIO_ReadPin (GPIOA , GPIO_PIN_10)))       // if the pin is low
 		{
-			i&= ~(1<<(7-j));   // write 0
+			i&= ~(1<<(7-j));                             // write 0
 		}
 		else i|= (1<<(7-j));  // if the pin is high, write 1
-		while ((HAL_GPIO_ReadPin (GPIOA , GPIO_PIN_10)));  // wait for the pin to go low
+		while ((HAL_GPIO_ReadPin (GPIOA , GPIO_PIN_10)));    // wait for the pin to go low
 	}
 	return i;
 }
