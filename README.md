@@ -75,3 +75,6 @@ https://os.mbed.com/platforms/ST-Nucleo-L476RG/
 DHT11 usermanual:
 
 https://www.mouser.com/datasheet/2/758/DHT11-Technical-Data-Sheet-Translated-Version-1143054.pdf
+
+
+![Screenshot_2021-10-18_16-03-15](https://user-images.githubusercontent.com/41928033/137747666-31528f7a-d518-4013-bcf0-4c594ce23aa8.png)
