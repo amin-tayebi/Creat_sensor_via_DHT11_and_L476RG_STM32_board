@@ -85,7 +85,7 @@ void Set_Pin_Input (GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin)
 	GPIO_InitTypeDef GPIO_InitStruct = {0};
 	GPIO_InitStruct.Pin = GPIO_Pin;
 	GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-	// or it could be PULLDOWN if dosent work with PULLUP-------------------------amin note
+	// or it could be PULLDOWN if dosent work with PULLUP------------------------- note
 	GPIO_InitStruct.Pull = GPIO_PULLDOWN;
 	HAL_GPIO_Init(GPIOx, &GPIO_InitStruct);
 }
@@ -98,6 +98,7 @@ void DHT11_Start (void)
 	delay (20);   // wait for 20us
 	Set_Pin_Input(GPIOA , GPIO_PIN_10);    // set as input
 }
+//-------------------------------------------------------------------we did'nt use it but it could be used to check if the sensor is present or not
 uint8_t DHT11_Check_Response (void)
 {
 	uint8_t Response = 0;
