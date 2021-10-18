@@ -27,12 +27,18 @@ https://drive.google.com/drive/folders/193a0y-XQt243AbnOHGVEFdcdlx3MfqSE?usp=sha
 
 Here the TIMER TIM2 with following parameters enabled:
 
-Trigger source = ITR0
+Trigger source = ITR0 (It could be ITR1 or ITR2 or any of them)
+This is the Source where it triggers the TIMER. 
 
-prescaler = 80-1
+
+prescaler = 80-1 (100mhz = 10 microsecond delay so 80mhz)
+
+Counter Period = 4.294.467.295
+The delay continue until the counter ends to reach the input data we provided. 
+MCU repeatedly check the wire to receive the input data in the pin ()
 
 In the Board scheme for the signal transmission of DHT11:
-PIN PA10 set to "GPIOoutput" (PIN name = A PIN number = 10)
+PIN PA10 set to "GPIOoutput" (PIN name = A, PIN number = 10)
 
 <b>👉 Hardware equipment</b>
 
