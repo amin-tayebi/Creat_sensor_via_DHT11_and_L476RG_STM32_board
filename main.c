@@ -180,7 +180,7 @@ int main(void)
 		Rh_byte2 = DHT11_Read ();
 		Temp_byte1 = DHT11_Read ();
 		Temp_byte2 = DHT11_Read ();
-		//  SUM = DHT11_Read();
+		//  SUM = DHT11_Read();                        // you may use this line to see the check sum bit (last 8 bits of 40 bit payloads is check sum bit)
 		
 		//  TEMP = Temp_byte1;
 		//  RH = Rh_byte1;
