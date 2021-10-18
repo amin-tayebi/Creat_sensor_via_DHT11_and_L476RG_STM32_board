@@ -9,13 +9,17 @@ https://drive.google.com/drive/folders/193a0y-XQt243AbnOHGVEFdcdlx3MfqSE?usp=sha
 
 <b>📚 Description</b>
 
-- I wrote the codes in main.c of the project while its also possible to create a header libarary (DHT11.h) and a C library (DHT11.c) and write the fuctions on them. Then call it in the main.c.
+- Based on the usermanual of DHT11 we implement the steps necessaary to interact with DHT11 to read it's data. 
+
+- We wrote the codes in main.c of the project while its also possible to create a header libarary (DHT11.h) and a C library (DHT11.c) and write the fuctions on them and locate these files on the Src Folder (where other header libraries exist). Then call x.h file in the main.c (e.g. Include DHT11.h).
 
 - Its possible to use DHT22 also here just you need to see the usermanual of DHT22 and compare the delay (microseconds) between the two and change that in the source code.
 
-- Its possible to use this code  in other STM32 boards. Just you need to enable the TIM (timer) in the scheme of the board, then modify and correspond it to the TIMER number (TIMx) every where in the code it has been used (e.g. if you enabeled TIM2 or TIM3).
+- Its possible to use this code in other STM32 boards. Just you need to enable one of the timers in the scheme configuration page (of the board) and set its parameters based on the video, then it needs to be same as every where in the code it has been used (e.g. if you enabeled timer3 (TIM3) then in compare to this maic.c file every where it shold be TIM3).
 
-- I didn't put other codes (main.h or stm32l4xx_hal.h) as they are remain unchange after opening L476RG board exapmle.
+- All of the timers are equal we need to activate and set configuration just on one of them (makes no different TIM2 TM3 or....).
+
+- We didn't put other codes (main.h or stm32l4xx_hal.h and other...) as they are remained unchanged.
 
 Here the TIMER TIM2 with following parameters enabled:
 
