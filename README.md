@@ -40,6 +40,8 @@ MCU repeatedly check the wire to receive the input data in the pin ()
 - In the Board scheme for the signal transmission of DHT11:
 PIN PA10 set to "GPIOoutput" (PIN name = A, PIN number = 10)
 
+- We did'nt use "DHT11_Check_Response" function, but it could be used to check if the sensor is present or not
+
 - Delays are in microsecons
 
 <b>👉 Hardware equipment</b>
