@@ -79,5 +79,5 @@ DHT11 usermanual:
 https://www.mouser.com/datasheet/2/758/DHT11-Technical-Data-Sheet-Translated-Version-1143054.pdf
 
 
-![Screenshot_2021-10-18_16-03-15](https://user-images.githubusercontent.com/41928033/137748072-41eb49e9-37ad-44e8-bbd4-d33a19766523.png)
+![Screenshot_2021-10-18_16-03-15](https://user-images.githubusercontent.com/41928033/137771299-ca0830f5-7057-4751-b311-8b030f606dfa.png)
 
