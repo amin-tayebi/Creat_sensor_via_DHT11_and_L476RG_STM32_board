@@ -9,7 +9,7 @@ https://drive.google.com/drive/folders/193a0y-XQt243AbnOHGVEFdcdlx3MfqSE?usp=sha
 
 <b>📚 Description</b>
 
-- Based on the usermanual of DHT11 a library wrote to implement 4 steps mentioned in the usermanual to be able to read DHT11 sensor data (Temperature and Humidity) and interact with DHT11 to read it's data. 
+- Based on the usermanual of DHT11 a library wrote to implement 4 steps mentioned in the usermanual to be able to read DHT11 sensor data (Temperature and Humidity) and interact with DHT11 to read it's data. Main functions defined are (DHT11_start, Check_response, DHT11_read) but besides there would be needed other functions (Delay, Pin_input, Pin_output)
 
 - Pull-up and pull-down procedures for the MCU pin(MCU I/O or GPIO in/out) implemented and set them to high or low based on the DHT11 usermanual
 
@@ -42,7 +42,7 @@ PIN PA10 set to "GPIOoutput" (PIN name = A, PIN number = 10)
 
 - We did'nt use "DHT11_Check_Response" function, but it could be used to check if the sensor is present or not
 
-- Delays are in microsecons
+- Delays are in microsecons (Just based on DHT11 usermanual we defined DHT11_start function, 18ms was in milisecond we chamged it to 18000 microsecond)
 
 <b>👉 Hardware equipment</b>
 
