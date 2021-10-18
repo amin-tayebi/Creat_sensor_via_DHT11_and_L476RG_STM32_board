@@ -13,19 +13,19 @@ https://drive.google.com/drive/folders/193a0y-XQt243AbnOHGVEFdcdlx3MfqSE?usp=sha
 
 - Pull-up and pull-down procedures for the MCU pin(MCU I/O or GPIO in/out) implemented and set them to high or low based on the DHT11 usermanual
 
-- We Studied how define timer and related interrupt parameters. Then a timer defined to generate interrupt and delay in the board to be able to interact with DHT11 sensor and read its data 
+- We Studied how define timer and related interrupt parameters. Then a timer defined to be used in our "DELAY function" in our code to be able to interact with DHT11 sensor and read its data 
 
-- We wrote the codes in main.c of the project while its also possible to create a header libarary (DHT11.h) and a C library (DHT11.c) and write the fuctions on them and locate these files on the Src Folder (where other header libraries exist). Then call x.h file in the main.c (e.g. Include DHT11.h).
+- We wrote the codes in main.c of the project while its also possible to create a header libarary (DHT11.h) and a C library (DHT11.c) and write the fuctions on them and locate these files on the Src Folder (where other header libraries exist). Then call x.h file in the main.c (e.g. Include DHT11.h)
 
-- Its possible to use DHT22 also here just you need to see the usermanual of DHT22 and compare the delay (microseconds) between the two and change that in the source code.
+- Its possible to use DHT22 also here just you need to see the usermanual of DHT22 and compare the delay (microseconds) between the two and change that in the source code
 
-- Its possible to use this code in other STM32 boards. Just you need to enable one of the timers in the scheme configuration page (of the board) and set its parameters based on the video, then it needs to be same as every where in the code it has been used (e.g. if you enabeled timer3 (TIM3) then in compare to this maic.c file every where it shold be TIM3).
+- Its possible to use this code in other STM32 boards. Just you need to enable one of the timers in the scheme configuration page (of the board) and set its parameters based on the video, then it needs to be same as every where in the code it has been used (e.g. if you enabeled timer3 (TIM3) then in compare to this maic.c file every where it shold be TIM3)
 
-- All of the timers are equal we need to activate and set configuration just on one of them (makes no different TIM2 TM3 or....).
+- We didn't put other codes (main.h or stm32l4xx_hal.h and other...) as they are remained unchanged
 
-- We didn't put other codes (main.h or stm32l4xx_hal.h and other...) as they are remained unchanged.
+- All of the timers are equal we need to activate and set configuration just on one of them (makes no different TIM2 TM3 or....)
 
-Here the TIMER TIM2 with following parameters enabled:
+- Here the TIMER TIM2 with following parameters enabled:
 
 Trigger source = ITR0 (It could be ITR1 or ITR2 or any of them)
 This is the Source where it triggers the TIMER. 
@@ -37,8 +37,10 @@ Counter Period = 4.294.467.295
 The delay continue until the counter ends to reach the input data we provided. 
 MCU repeatedly check the wire to receive the input data in the pin ()
 
-In the Board scheme for the signal transmission of DHT11:
+- In the Board scheme for the signal transmission of DHT11:
 PIN PA10 set to "GPIOoutput" (PIN name = A, PIN number = 10)
+
+- Delays are in microsecons
 
 <b>👉 Hardware equipment</b>
 
