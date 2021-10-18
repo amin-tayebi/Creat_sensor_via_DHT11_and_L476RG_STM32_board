@@ -115,19 +115,19 @@ uint8_t DHT11_Check_Response (void)
 }
 uint8_t DHT11_Read (void)
 {
-	uint8_t i,j;
-	for (j=0;j<8;j++)
+	uint8_t i,j;					   // "i" is our desiered value = one bit of DHT11 payload in each time the function will be called
+	for (j=0;j<8;j++)                                  //Loop executes 8 times to receive 8 bits payload so each time function called 8 bit of data will be read
 	{
 		while (!(HAL_GPIO_ReadPin (GPIOA , GPIO_PIN_10)));   // wait for the pin to go high
 		delay (40);                                          // wait for 40 us
 		if (!(HAL_GPIO_ReadPin (GPIOA , GPIO_PIN_10)))       // if the pin is low
 		{
-			i&= ~(1<<(7-j));                             // write 0
+			i&= ~(1<<(7-j));                             // write 0    (These are bitwise operators. Means write left biit of "j" to right bit of "i")
 		}
-		else i|= (1<<(7-j));  // if the pin is high, write 1
-		while ((HAL_GPIO_ReadPin (GPIOA , GPIO_PIN_10)));    // wait for the pin to go low
+		else i|= (1<<(7-j));                                 // if the pin is high, write 1
+		while ((HAL_GPIO_ReadPin (GPIOA , GPIO_PIN_10)));    // wait for the pin to go low (Do this loop until the pin to go low)
 	}
-	return i;
+	return i;						     
 }
 /* USER CODE END 0 */
 
