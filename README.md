@@ -31,7 +31,7 @@ Trigger source = ITR0 (It could be ITR1 or ITR2 or any of them)
 This is the Source where it triggers the TIMER. 
 
 
-prescaler = 80-1 (100mhz = 10 microsecond delay so 80mhz)
+prescaler = 80-1 (100mhz = 0.1 microsecond delay so 80mhz will generate 0.8 microsecond delay)
 
 Counter Period = 4.294.467.295
 The delay continue until the counter ends to reach the input data we provided. 
