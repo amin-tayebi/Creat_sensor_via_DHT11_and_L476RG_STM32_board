@@ -11,6 +11,8 @@ https://drive.google.com/drive/folders/193a0y-XQt243AbnOHGVEFdcdlx3MfqSE?usp=sha
 
 - Based on the usermanual of DHT11 a library wrote to implement 4 steps mentioned in the usermanual to be able to read DHT11 sensor data (Temperature and Humidity) and interact with DHT11 to read it's data. Main functions defined are (DHT11_start, Check_response, DHT11_read) but besides there would be needed other functions (Delay, Set_Pin_input, Set_Pin_output)
 
+VERY IMPORTANT NOTE: In order to receive the data of DHT11 it is necessary to restart the board (pushing the blach botton).
+
 - Pull-up and pull-down procedures for the MCU pin(MCU I/O or GPIO in/out) implemented and set them to high or low based on the DHT11 usermanual
 
 - We Studied how define timer and related interrupt parameters. Then a timer defined to be used in our "DELAY function" in our code to be able to interact with DHT11 sensor and read its data 
